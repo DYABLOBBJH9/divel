@@ -1,0 +1,43 @@
+pre code {
+    font-family: monospace;
+    font-size: 0.9rem;
+    background: #222;
+    padding: 15px;
+    border-radius: 8px;
+    display: block;
+    white-space: pre-wrap;
+    color: #ccc;
+}
+
+.selector {
+    color: #f07178;
+    /* reddish */
+    font-weight: bold;
+}
+
+.keyword {
+    color: #c792ea;
+    /* purple */
+    font-weight: bold;
+}
+
+.brace {
+    color: #89ddff;
+    /* light blue */
+}
+
+.percent {
+    color: #ffcb6b;
+    /* yellow */
+    font-weight: bold;
+}
+
+.property {
+    color: #82aaff;
+    /* blue */
+}
+
+.value {
+    color: #c3e88d;
+    /* green */
+}

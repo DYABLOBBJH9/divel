@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+* {
+    font-family: "Ubuntu", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(images.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f0f0f0;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    width: 90%;
+    max-width: 1100px;
+    padding: 30px 40px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #50ff56;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: #ff7f50;
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-weight: 500;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    border-bottom-color: #ff7f50;
+}
+
+.content h2 {
+    font-size: 80px;
+    font-weight: 900;
+    letter-spacing: 8px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #00a906;
+}
+
+.content p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 600px;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+.content span {
+    color: #2825eb;
+    font-weight: 600;
+}
+
+.content button {
+    background-color: #00d97f;
+    color: #fff;
+    border: none;
+    padding: 15px 40px;
+    font-size: 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.content button:hover {
+    background-color: #e06b3c;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 40px;
+        background: rgba(0, 0, 0, 0.8);
+        flex-direction: column;
+        width: 180px;
+        padding: 20px;
+        border-radius: 10px;
+        gap: 15px;
+        box-shadow: 0 0 15px rgba(255, 127, 80, 0.5);
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .content h2 {
+        font-size: 40px;
+        letter-spacing: 4px;
+    }
+
+    .content p {
+        font-size: 16px;
+        max-width: 100%;
+    }
+
+    .container {
+        padding: 20px;
+        height: auto;
+    }
+}

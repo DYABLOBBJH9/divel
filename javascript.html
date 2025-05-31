@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>تعلم JavaScript بالدارجة - صفحة تعليمية طويلة</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+
+        body {
+            margin: 0;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #000000, #004d00);
+            font-family: 'Cairo', sans-serif;
+            color: #c5f1c5;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: rgba(0, 0, 0, 0.85);
+            padding: 30px 40px 60px;
+            border-radius: 12px;
+            box-shadow: 0 0 25px #2ecc40;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3.6rem;
+            margin-bottom: 60px;
+            color: #a8d5a3;
+            text-shadow: 0 0 8px #4caf50;
+            animation: glowPulse 3s infinite alternate, moveUpDown 4s infinite ease-in-out;
+        }
+
+        @keyframes glowPulse {
+            0% {
+                text-shadow: 0 0 8px #4caf50;
+                color: #a8d5a3;
+            }
+
+            50% {
+                text-shadow: 0 0 20px #81c784;
+                color: #d0f0c0;
+            }
+
+            100% {
+                text-shadow: 0 0 8px #4caf50;
+                color: #a8d5a3;
+            }
+        }
+
+        @keyframes moveUpDown {
+
+            0%,
+            100% {
+                transform: translateY(0);
+                text-shadow: 0 0 8px #4caf50, 0 0 15px #81c784;
+            }
+
+            50% {
+                transform: translateY(-15px);
+                text-shadow: 0 0 20px #a5d6a7, 0 0 40px #c8e6c9;
+            }
+        }
+
+        /* أنيميشن العناوين h2 */
+        @keyframes fadeSlideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeSlideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes bounceInScale {
+            0% {
+                opacity: 0;
+                transform: scale(0.7) translateY(20px);
+            }
+
+            60% {
+                opacity: 1;
+                transform: scale(1.05) translateY(-10px);
+            }
+
+            100% {
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-top: 50px;
+            margin-bottom: 18px;
+            color: #8ad98a;
+            border-bottom: 2px solid #2ecc40;
+            padding-bottom: 6px;
+            opacity: 0;
+        }
+
+        h2.animate1 {
+            animation: fadeSlideInLeft 1s forwards;
+        }
+
+        h2.animate2 {
+            animation: fadeSlideInRight 1s forwards;
+        }
+
+        h2.animate3 {
+            animation: bounceInScale 1s forwards;
+        }
+
+        p {
+            font-size: 1.15rem;
+            color: #b6e3b6;
+        }
+
+        pre {
+            background: #0a350a;
+            border-radius: 6px;
+            padding: 18px 20px;
+            overflow-x: auto;
+            color: #d6f5d6;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1rem;
+            box-shadow: inset 0 0 15px #2ecc40;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s forwards;
+        }
+
+        /* تأخير ظهور الأكواد */
+        pre:nth-of-type(1) {
+            animation-delay: 0.6s;
+        }
+
+        pre:nth-of-type(2) {
+            animation-delay: 1.2s;
+        }
+
+        pre:nth-of-type(3) {
+            animation-delay: 1.8s;
+        }
+
+        pre:nth-of-type(4) {
+            animation-delay: 2.4s;
+        }
+
+        pre:nth-of-type(5) {
+            animation-delay: 3s;
+        }
+
+        pre:nth-of-type(6) {
+            animation-delay: 3.6s;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* تلوين كود JavaScript */
+        .js-keyword {
+            color: #7CFC00;
+            font-weight: bold;
+        }
+
+        .js-function {
+            color: #32CD32;
+        }
+
+        .js-string {
+            color: #98FB98;
+        }
+
+        .js-comment {
+            color: #228B22;
+            font-style: italic;
+        }
+
+        .js-variable {
+            color: #ADFF2F;
+        }
+
+        .js-number {
+            color: #9ACD32;
+        }
+
+        a {
+            color: #6ef26e;
+            text-decoration: none;
+            border-bottom: 1.5px dashed #6ef26e;
+            transition: color 0.3s ease, border-color 0.3s ease;
+        }
+
+        a:hover {
+            color: #adebad;
+            border-color: #adebad;
+        }
+
+        ul,
+        ol {
+            margin: 0 0 20px 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>تعلم JavaScript بالدارجة المغربية</h1>
+
+        <h2 class="animate1">شنو هي JavaScript؟</h2>
+        <p>
+            JavaScript هي لغة برمجة كتخلي صفحات الويب ديالك ديناميكية وتفاعلية.<br>
+            يعني تقدر تزيد حركات، تستقبل مدخلات المستخدم، تحسب وتحلل البيانات، وأكثر من هاد الشي.<br>
+            بلا JavaScript، صفحات الويب كتكون ثابتة فقط (نصوص وصور).
+        </p>
+        <pre><code><span class="js-comment">// هذا مثال بسيط بلغة JavaScript</span>
+<span class="js-keyword">console</span>.<span class="js-function">log</span>(<span class="js-string">'السلام عليكم!'</span>);
+  </code></pre>
+
+        <h2 class="animate2">كيفاش نكتب كود JavaScript؟</h2>
+        <p>
+            كود JavaScript كيكتب داخل الوسم <code>&lt;script&gt;</code> في الصفحة ديالك.<br>
+            تقدر تكتبها مباشرة داخل ملف HTML أو في ملف خارجي <code>.js</code>.
+        </p>
+        <pre><code><span class="tag">&lt;script&gt;</span>
+  <span class="js-keyword">alert</span>(<span class="js-string">'مرحبا بك في صفحة الويب!'</span>);
+<span class="tag">&lt;/script&gt;</span>
+  </code></pre>
+
+        <h2 class="animate3">المتغيرات Variables</h2>
+        <p>
+            المتغير هو مكان كتخزن فيه بيانات مؤقتة.<br>
+            في JavaScript تقدر تستعمل <code>let</code> أو <code>const</code> لتعريف المتغيرات.
+        </p>
+        <pre><code><span class="js-keyword">let</span> <span class="js-variable">age</span> = <span class="js-number">25</span>;
+<span class="js-keyword">const</span> <span class="js-variable">name</span> = <span class="js-string">'سعيد'</span>;
+  </code></pre>
+
+        <h2 class="animate1">الدوال Functions</h2>
+        <p>
+            الدالة هي مجموعة من الأوامر اللي كتقوم بعمل معين، تقدر تعيد استعمالها مرات كثيرة.
+        </p>
+        <pre><code><span class="js-keyword">function</span> <span class="js-function">sayHello</span>() {
+  <span class="js-keyword">alert</span>(<span class="js-string">'سلام!'</span>);
+}
+<span class="js-function">sayHello</span>();
+  </code></pre>
+
+        <h2 class="animate2">الشروط if else</h2>
+        <p>
+            كتستعمل الشروط باش تحدد واش كيدوز كود معين أو لا بناءً على حالة معينة.
+        </p>
+        <pre><code><span class="js-keyword">let</span> <span class="js-variable">age</span> = <span class="js-number">18</span>;
+<span class="js-keyword">if</span> (<span class="js-variable">age</span> >= <span class="js-number">18</span>) {
+  <span class="js-keyword">alert</span>(<span class="js-string">'مسموح لك تدخل'</span>);
+} <span class="js-keyword">else</span> {
+  <span class="js-keyword">alert</span>(<span class="js-string">'ممنوع عليك'</span>);
+}
+  </code></pre>
+
+        <h2 class="animate3">الحلقات Loops</h2>
+        <p>
+            الحلقات كتسمحلك تكرر نفس الكود بزاف ديال المرات بشكل أوتوماتيكي.
+        </p>
+        <pre><code><span class="js-keyword">for</span> (<span class="js-keyword">let</span> <span class="js-variable">i</span> = <span class="js-number">0</span>; <span class="js-variable">i</span> &lt; <span class="js-number">5</span>; <span class="js-variable">i</span>++) {
+  <span class="js-keyword">console</span>.<span class="js-function">log</span>(<span class="js-string">'العدد: '</span> + <span class="js-variable">i</span>);
+}
+  </code></pre>
+
+        <h2 class="animate1">المصفوفات Arrays</h2>
+        <p>
+            المصفوفة هي مجموعة من القيم كتخزنها فمتغير واحد.
+        </p>
+        <pre><code><span class="js-keyword">let</span> <span class="js-variable">fruits</span> = [<span class="js-string">'تفاح'</span>, <span class="js-string">'موز'</span>, <span class="js-string">'برتقال'</span>];
+<span class="js-keyword">console</span>.<span class="js-function">log</span>(<span class="js-variable">fruits</span>[<span class="js-number">1</span>]); <span class="js-comment">// يطبع موز</span>
+  </code></pre>
+
+        <h2 class="animate2">الكائنات Objects</h2>
+        <p>
+            الكائن هو متغير كيخزن بيانات مركبة على شكل خصائص وقيم.
+        </p>
+        <pre><code><span class="js-keyword">let</span> <span class="js-variable">person</span> = {
+  <span class="attr-name">name</span>: <span class="js-string">'ليلى'</span>,
+  <span class="attr-name">age</span>: <span class="js-number">30</span>,
+  <span class="attr-name">city</span>: <span class="js-string">'الدار البيضاء'</span>
+};
+<span class="js-keyword">console</span>.<span class="js-function">log</span>(<span class="js-variable">person</span>.<span class="attr-name">name</span>);
+  </code></pre>
+
+        <h2 class="animate3">DOM - كيفاش نبدلو الصفحة بالـ JavaScript؟</h2>
+        <p>
+            DOM هي الوثيقة اللي كتحتوي على كل عناصر الصفحة، وJavaScript كتقدر تبدل فيها وتزيد تحكم فالصفحة.<br>
+            مثلاً، تقدر تبدل النص، تضيف أزرار، ولا تحذف عناصر.
+        </p>
+        <pre><code><span class="tag">&lt;button id="btn"&gt;</span>ضغظني<span class="tag">&lt;/button&gt;</span>
+
+<span class="js-keyword">const</span> <span class="js-variable">btn</span> = <span class="js-function">document</span>.<span class="js-function">getElementById</span>(<span class="js-string">'btn'</span>);
+<span class="js-variable">btn</span>.<span class="js-function">addEventListener</span>(<span class="js-string">'click'</span>, <span class="js-keyword">function</span>() {
+  <span class="js-function">alert</span>(<span class="js-string">'تهلا ف راسك!'</span>);
+});
+  </code></pre>
+
+        <h2 class="animate1">تغيير المحتوى النصي</h2>
+        <p>
+            تقدر تبدل النص داخل أي عنصر بسهولة.
+        </p>
+        <pre><code><span class="js-keyword">const</span> <span class="js-variable">title</span> = <span class="js-function">document</span>.<span class="js-function">querySelector</span>(<span class="js-string">'h1'</span>);
+<span class="js-variable">title</span>.<span class="js-function">textContent</span> = <span class="js-string">'مرحبا ب JavaScript!'</span>;
+  </code></pre>
+
+        <h2 class="animate2">التعامل مع الأحداث Events</h2>
+        <p>
+            الأحداث هي ردود الفعل على أفعال المستخدم، بحال الضغط على زر، تحريك الماوس، أو كتابة نص.<br>
+            JavaScript كتسمح لك تتعامل مع هاد الأحداث وتبرمج الردود ديالك.
+        </p>
+        <pre><code><span class="tag">&lt;input id="inputBox" type="text" placeholder="كتب شي حاجة"&gt;</span>
+
+<span class="js-keyword">const</span> <span class="js-variable">inputBox</span> = <span class="js-function">document</span>.<span class="js-function">getElementById</span>(<span class="js-string">'inputBox'</span>);
+<span class="js-variable">inputBox</span>.<span class="js-function">addEventListener</span>(<span class="js-string">'input'</span>, <span class="js-keyword">function</span>(event) {
+  <span class="js-function">console</span>.<span class="js-function">log</span>(event.<span class="attr-name">target</span>.<span class="js-function">value</span>);
+});
+  </code></pre>
+
+        <h2 class="animate3">تطبيق بسيط: حساب مجموع رقمين</h2>
+        <p>
+            دابا غادي نديروا مثال بسيط بحساب مجموع رقمين يدخلهم المستخدم.
+        </p>
+        <pre><code>
+<span class="tag">&lt;input id="num1" type="number" placeholder="الرقم 1"&gt;</span>
+<span class="tag">&lt;input id="num2" type="number" placeholder="الرقم 2"&gt;</span>
+<span class="tag">&lt;button id="calc"&gt;حسب المجموع&lt;/button&gt;</span>
+<span class="tag">&lt;div id="result"&gt;&lt;/div&gt;</span>
+
+<span class="js-keyword">const</span> <span class="js-variable">num1</span> = <span class="js-function">document</span>.<span class="js-function">getElementById</span>(<span class="js-string">'num1'</span>);
+<span class="js-variable">const</span> <span class="js-variable">num2</span> = <span class="js-function">document</span>.<span class="js-function">getElementById</span>(<span class="js-string">'num2'</span>);
+<span class="js-variable">const</span> <span class="js-variable">calc</span> = <span class="js-function">document</span>.<span class="js-function">getElementById</span>(<span class="js-string">'calc'</span>);
+<span class="js-variable">const</span> <span class="js-variable">result</span> = <span class="js-function">document</span>.<span class="js-function">getElementById</span>(<span class="js-string">'result'</span>);
+
+<span class="js-variable">calc</span>.<span class="js-function">addEventListener</span>(<span class="js-string">'click'</span>, <span class="js-keyword">function</span>() {
+  <span class="js-keyword">const</span> <span class="js-variable">sum</span> = Number(<span class="js-variable">num1</span>.<span class="js-function">value</span>) + Number(<span class="js-variable">num2</span>.<span class="js-function">value</span>);
+  <span class="js-variable">result</span>.<span class="js-function">textContent</span> = <span class="js-string">'المجموع هو: '</span> + <span class="js-variable">sum</span>;
+});
+  </code></pre>
+
+        <h2 class="animate1">نصائح مهمة لتعلم JavaScript</h2>
+        <ul>
+            <li>جرب تكتب الكود بيدك على المتصفح أو محرر الكود.</li>
+            <li>حاول تفهم كل سطر كتبته، وشنو كيدير.</li>
+            <li>شوف الدوكومنتيشن الرسمية بحال <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+                    target="_blank" rel="noopener noreferrer">MDN JavaScript</a>.</li>
+            <li>تعلم تنسيق الصفحة بـ CSS ودمجها مع JavaScript لتزيد في التحكم.</li>
+        </ul>
+
+        <h2 class="animate2">خلاصة طويلة وبسيطة</h2>
+        <p>
+            JavaScript هي اللغة اللي كتزيد الحياة والتفاعل لصفحات الويب.<br>
+            من المتغيرات والدوال للحلقات والكائنات، تعلمها خطوة بخطوة كيخليك تبني مواقع قوية.<br>
+            DOM هو المفتاح باش تتحكم في الصفحة بعد تحميلها.<br>
+            التمرين المستمر والتجريب هو سر النجاح.<br>
+            تعلم JavaScript كيبدا بفهم الأساسيات، ومن بعد كتزيد تعمق بالمشاريع.
+        </p>
+
+        <h2 class="animate3">مراجع مهمة</h2>
+        <ol>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"
+                    rel="noopener noreferrer">MDN JavaScript Documentation</a></li>
+            <li><a href="https://javascript.info/" target="_blank" rel="noopener noreferrer">javascript.info - موقع
+                    تعليمي شامل</a></li>
+            <li><a href="https://www.w3schools.com/js/" target="_blank" rel="noopener noreferrer">W3Schools JavaScript
+                    Tutorial</a></li>
+        </ol>
+
+        <h2 class="animate1">شكراً بزاف على المتابعة! 🌿</h2>
+        <p>إلى بغيت تزيد شي حاجة ولا تسول، مرحبا بيك دائماً!</p>
+    </div>
+
+    <script>
+        // أنيميشن للعناوين بالتتابع
+        const headers = document.querySelectorAll('h2');
+        headers.forEach((h2, i) => {
+            setTimeout(() => {
+                h2.classList.add('animate' + ((i % 3) + 1));
+            }, i * 700);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="csss.css" />
+    <title>تعلم CSS أنيميشن بألوان متعددة</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #000000, #004400);
+            color: #eee;
+            line-height: 1.6;
+        }
+
+        h1 {
+            color: #00ff00;
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            text-shadow: 0 0 15px #00ff00cc;
+            animation: glowTitle 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes glowTitle {
+            0% {
+                text-shadow: 0 0 10px #00ff00aa;
+            }
+
+            100% {
+                text-shadow: 0 0 30px #00ff00ff;
+            }
+        }
+
+        h2 {
+            margin-top: 3rem;
+            font-weight: 700;
+        }
+
+        section {
+            background: #111;
+            padding: 20px;
+            margin-bottom: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 0 15px #00ff00bb;
+        }
+
+        pre {
+            background: #222;
+            color: #ccffcc;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: monospace;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .box {
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: 12px;
+            font-weight: bold;
+            text-align: center;
+            width: 230px;
+            margin-left: auto;
+            margin-right: auto;
+            color: white;
+            box-shadow: 0 0 10px #000;
+        }
+
+        /* Different colored boxes with animations */
+        .anim1 {
+            background: #e63946;
+            animation: bounce 3s ease-in-out infinite;
+            box-shadow: 0 0 15px #e63946;
+        }
+
+        .anim2 {
+            background: #f1faee;
+            color: #1d3557;
+            animation: spin 6s linear infinite;
+            box-shadow: 0 0 15px #a8dadc;
+        }
+
+        .anim3 {
+            background: #457b9d;
+            animation: pulse 4s ease-in-out infinite;
+            box-shadow: 0 0 20px #457b9d;
+        }
+
+        .anim4 {
+            background: #2a9d8f;
+            animation: slideLeft 3s ease-in-out infinite alternate;
+            box-shadow: 0 0 15px #2a9d8f;
+        }
+
+        .anim5 {
+            background: #f4a261;
+            animation: slideRight 3s ease-in-out infinite alternate;
+            box-shadow: 0 0 15px #f4a261;
+        }
+
+        .anim6 {
+            background: #e76f51;
+            animation: colorPulse 5s linear infinite;
+            box-shadow: 0 0 18px #e76f51;
+        }
+
+        .anim7 {
+            background: #264653;
+            animation: shake 0.8s ease-in-out infinite;
+            box-shadow: 0 0 15px #264653;
+        }
+
+        .anim8 {
+            background: #ffb703;
+            color: black;
+            animation: flip 3s linear infinite;
+            box-shadow: 0 0 18px #ffb703;
+        }
+
+        .anim9 {
+            background: #8ecae6;
+            color: black;
+            animation: scaleUpDown 4s ease-in-out infinite;
+            box-shadow: 0 0 20px #8ecae6;
+        }
+
+        .anim10 {
+            background: #06d6a0;
+            animation: shadowPulse 3s ease-in-out infinite;
+            box-shadow: 0 0 22px #06d6a0;
+        }
+
+        /* Animations */
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-40px);
+            }
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        @keyframes slideLeft {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-70px);
+            }
+        }
+
+        @keyframes slideRight {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(70px);
+            }
+        }
+
+        @keyframes colorPulse {
+
+            0%,
+            100% {
+                background-color: #e76f51;
+            }
+
+            50% {
+                background-color: #f4a261;
+            }
+        }
+
+        @keyframes shake {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-6px);
+            }
+
+            75% {
+                transform: translateX(6px);
+            }
+        }
+
+        @keyframes flip {
+
+            0%,
+            100% {
+                transform: rotateY(0);
+            }
+
+            50% {
+                transform: rotateY(180deg);
+            }
+        }
+
+        @keyframes scaleUpDown {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.3);
+            }
+        }
+
+        @keyframes shadowPulse {
+
+            0%,
+            100% {
+                box-shadow: 0 0 15px;
+            }
+
+            50% {
+                box-shadow: 0 0 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>تعلم CSS بأنيميشن بألوان متعددة</h1>
+
+    <main>
+
+        <section>
+            <h2>1. نط متكرر (Bounce)</h2>
+            <div class="box anim1">هاد العنصر كيدير نط متواصل</div>
+            <pre><code>@keyframes bounce {
+  0%, 100% {transform: translateY(0);}
+  50% {transform: translateY(-40px);}
+}
+.box {
+  animation: bounce 3s ease-in-out infinite;
+}
+</code></pre>
+        </section>
+
+        <section>
+            <h2>2. دوران مستمر (Spin)</h2>
+            <div class="box anim2">هاد العنصر كيدور 360 درجة باستمرار</div>
+            <pre><code>@keyframes spin {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+.box {
+  animation: spin 6s linear infinite;
+}
+</code></pre>
+        </section>
+
+        <section>
+            <h2>3. نبض خفيف (Pulse)</h2>
+            <div class="box anim3">هاد العنصر كيتنفس ببطء (تقل و يزيد الشفافية)</div>
+            <pre><code>@keyframes pulse {
+  0%, 100% {opacity: 1;}
+  50% {opacity: 0.5;}
+}
+.box {
+  animation: pulse 4s ease-in-out infinite;
+}
+</code></pre>
+        </section>
+
+        <section>
+            <h2>4. انزلاق لليسار (Slide Left)</h2>
+            <div class="box anim4">هاد العنصر كينزلق لليسار ويرجع</div>
+            <pre><code>@keyframes slideLeft {
+  0% {transform: translateX(0);}
+  100% {transform: translateX(-70px);}
+}
+.box {
+  animation: slideLeft 3s ease-in-out infinite alternate;
+}
+</code></pre>
+        </section>
+
+        <section>
+            <h2>5. انزلاق لليمين (Slide Right)</h2>
+            <div class="box anim5">هاد العنصر كينزلق لليمين ويرجع</div>
+            <pre><code>@keyframes slideRight {
+  0% {transform: translateX(0);}
+  100% {transform: translateX(70px);}
+}
+.box {
+  animation: slideRight 3s ease-in-out infinite alternate;
+}
+</code></pre>
+        </section>
+
+        <section>
+            <h2>6. تغيير لون متكرر (Color Pulse)</h2>
+            <div class="box anim6">هاد العنصر كيتغير لونو بين جوج ألوان</div>
+            <pre><code>@keyframes colorPulse {
+  0%, 100% {background-color: #e76f51;}
+  50% {background-color: #f4a261;}
+}
+.box {
+  animation: colorPulse 5s linear infinite;
+}
+</code></pre>
+        </section>
+
+        <section>
+            <h2>7. هزة خفيفة (Shake)</h2>
+            <div class="box anim7">هاد العنصر كيهتز يمين ويسار بسرعة</div>
+            <pre><code>@keyframes shake {
+  0%, 100% {transform: translateX(0);}
+  25% {transform: translateX(-6px);}
+  75% {transform: translateX(6px);}
+}
+.box {
+  animation: shake 0.8s ease-in-out infinite;
+}
+</code></pre>
+        </section>
+
+        <section>
+            <h2>8. قلب الدوران (Flip)</h2>
+            <div class="box anim8">هاد العنصر كيدور على المحور Y</div>
+            <pre><code>@keyframes flip {
+  0%, 100% {transform: rotateY(0);}
+  50% {transform: rotateY(180deg);}
+}
+.box {
+  animation: flip 3s linear infinite;
+}
+</code></pre>
+        </section>
+
+        <section>
+            <h2>9. تكبير وتصغير (Scale Up Down)</h2>
+            <div class="box anim9">هاد العنصر كيتكبر وكينقص الحجم</div>
+            <pre><code>@keyframes scaleUpDown {
+  0%, 100% {transform: scale(1);}
+  50% {transform: scale(1.3);}
+}
+.box {
+  animation: scaleUpDown 4s ease-in-out infinite;
+}
+</code></pre>
+        </section>
+
+        <section>
+            <h2>10. نبض الظل (Shadow Pulse)</h2>
+            <div class="box anim10">هاد العنصر كينبض بالظل ديالو</div>
+            <pre><code>@keyframes shadowPulse {
+  0%, 100% {box-shadow: 0 0 15px;}
+  50% {box-shadow: 0 0 40px;}
+}
+.box {
+  animation: shadowPulse 3s ease-in-out infinite;
+}
+</code></pre>
+        </section>
+
+    </main>
+    <section>
+        <h2>1. نط متكرر (Bounce)</h2>
+        <div class="box anim1">هاد العنصر كيدير نط متواصل</div>
+        <pre><code>
+          <span class="selector">@keyframes</span> <span class="keyword">bounce</span> <span class="brace">{</span>
+            <span class="percent">0%, 100%</span> <span class="brace">{</span><br />
+            &nbsp;&nbsp;<span class="property">transform</span>: <span class="value">translateY(0)</span>;<br />
+            <span class="brace">}</span><br />
+            <span class="percent">50%</span> <span class="brace">{</span><br />
+            &nbsp;&nbsp;<span class="property">transform</span>: <span class="value">translateY(-40px)</span>;<br />
+            <span class="brace">}</span><br />
+          <span class="brace">}</span>
+          
+          <span class="selector">.box</span> <span class="brace">{</span><br />
+            &nbsp;&nbsp;<span class="property">animation</span>: <span class="value">bounce 3s ease-in-out infinite</span>;<br />
+          <span class="brace">}</span>
+            </code></pre>
+    </section>
+
+</body>
+
+</html>

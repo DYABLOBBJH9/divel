@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>تعلم HTML مفصل وبالدارجة - صفحة طويلة مع أنيميشن</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+
+        body {
+            margin: 0;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #000000, #004d00);
+            font-family: 'Cairo', sans-serif;
+            color: #c5f1c5;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: rgba(0, 0, 0, 0.85);
+            padding: 30px 40px 60px;
+            border-radius: 12px;
+            box-shadow: 0 0 25px #2ecc40;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3.6rem;
+            margin-bottom: 60px;
+            color: #a8d5a3;
+            text-shadow: 0 0 8px #4caf50;
+            animation: glowPulse 3s infinite alternate, moveUpDown 4s infinite ease-in-out;
+        }
+
+        @keyframes glowPulse {
+            0% {
+                text-shadow: 0 0 8px #4caf50;
+                color: #a8d5a3;
+            }
+
+            50% {
+                text-shadow: 0 0 20px #81c784;
+                color: #d0f0c0;
+            }
+
+            100% {
+                text-shadow: 0 0 8px #4caf50;
+                color: #a8d5a3;
+            }
+        }
+
+        @keyframes moveUpDown {
+
+            0%,
+            100% {
+                transform: translateY(0);
+                text-shadow: 0 0 8px #4caf50, 0 0 15px #81c784;
+            }
+
+            50% {
+                transform: translateY(-15px);
+                text-shadow: 0 0 20px #a5d6a7, 0 0 40px #c8e6c9;
+            }
+        }
+
+        /* أنيميشن العناوين h2 */
+        @keyframes fadeSlideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeSlideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes bounceInScale {
+            0% {
+                opacity: 0;
+                transform: scale(0.7) translateY(20px);
+            }
+
+            60% {
+                opacity: 1;
+                transform: scale(1.05) translateY(-10px);
+            }
+
+            100% {
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-top: 50px;
+            margin-bottom: 18px;
+            color: #8ad98a;
+            border-bottom: 2px solid #2ecc40;
+            padding-bottom: 6px;
+            opacity: 0;
+        }
+
+        h2.animate1 {
+            animation: fadeSlideInLeft 1s forwards;
+        }
+
+        h2.animate2 {
+            animation: fadeSlideInRight 1s forwards;
+        }
+
+        h2.animate3 {
+            animation: bounceInScale 1s forwards;
+        }
+
+        p {
+            font-size: 1.15rem;
+            color: #b6e3b6;
+        }
+
+        pre {
+            background: #0a350a;
+            border-radius: 6px;
+            padding: 18px 20px;
+            overflow-x: auto;
+            color: #d6f5d6;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1rem;
+            box-shadow: inset 0 0 15px #2ecc40;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s forwards;
+        }
+
+        /* تأخير ظهور الأكواد */
+        pre:nth-of-type(1) {
+            animation-delay: 0.6s;
+        }
+
+        pre:nth-of-type(2) {
+            animation-delay: 1.2s;
+        }
+
+        pre:nth-of-type(3) {
+            animation-delay: 1.8s;
+        }
+
+        pre:nth-of-type(4) {
+            animation-delay: 2.4s;
+        }
+
+        pre:nth-of-type(5) {
+            animation-delay: 3s;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* تلوين الكود */
+        .tag {
+            color: #4caf50;
+        }
+
+        .attr-name {
+            color: #81c784;
+        }
+
+        .attr-value {
+            color: #aed581;
+        }
+
+        .comment {
+            color: #388e3c;
+            font-style: italic;
+        }
+
+        a {
+            color: #6ef26e;
+            text-decoration: none;
+            border-bottom: 1.5px dashed #6ef26e;
+            transition: color 0.3s ease, border-color 0.3s ease;
+        }
+
+        a:hover {
+            color: #adebad;
+            border-color: #adebad;
+        }
+
+        ul,
+        ol {
+            margin: 0 0 20px 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>تعلم HTML مفصل وبالدارجة</h1>
+
+        <h2>شنو هي HTML؟</h2>
+        <p>
+            HTML هي لغة <strong>هيكلية</strong> كتسمح لنا نبنيو صفحات الويب.
+            هي اللي كتحدد الهيكلة ديال المحتوى: نصوص، صور، فيديو، روابط، جداول، وغيرهم.
+            بلا HTML، المتصفح مايعرفش كيفاش يعرض المحتوى ديالك.
+        </p>
+        <pre><code>
+<span class="comment">&lt;!-- بداية صفحة HTML --&gt;</span>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html&gt;</span>
+  <span class="tag">&lt;head&gt;</span> ... <span class="tag">&lt;/head&gt;</span>
+  <span class="tag">&lt;body&gt;</span> ... <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+  </code></pre>
+
+        <h2>هيكلة صفحة HTML</h2>
+        <p>
+            الصفحة كتبدأ بالتعريف <code>&lt;!DOCTYPE html&gt;</code> باش المتصفح يعرف نوع الصفحة.<br>
+            من بعد كاين الوسوم <code>&lt;html&gt;</code>، <code>&lt;head&gt;</code>، و <code>&lt;body&gt;</code>.<br>
+            <code>&lt;head&gt;</code> كتحتوي على معلومات ماكاتبانش ف الصفحة مباشرة، بحال العنوان والرابط لملفات CSS
+            وجافاسكريبت.<br>
+            <code>&lt;body&gt;</code> كتحتوي على المحتوى اللي غادي يبان ف الصفحة.
+        </p>
+        <pre><code>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html&gt;</span>
+  <span class="tag">&lt;head&gt;</span>
+    <span class="tag">&lt;title&gt;</span>العنوان ديال الصفحة<span class="tag">&lt;/title&gt;</span>
+  <span class="tag">&lt;/head&gt;</span>
+  <span class="tag">&lt;body&gt;</span>
+    المحتوى هنا
+  <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+  </code></pre>
+
+        <h2>الوسوم الأساسية (Tags)</h2>
+        <p>
+            HTML فيها بزاف ديال الوسوم اللي كتستعملها بزاف:<br>
+            <code>&lt;h1&gt;</code> العنوان الكبير، <code>&lt;p&gt;</code> الفقرة، <code>&lt;a&gt;</code> الرابط،
+            <code>&lt;img&gt;</code> الصورة، <code>&lt;ul&gt;</code> القائمة، وغيرها.<br>
+            كل وسم كيبدأ بـ <code>&lt;tag&gt;</code> وكيخلص ب <code>&lt;/tag&gt;</code> إلا كانت مش محتاجة تغلق.
+        </p>
+        <pre><code>
+<span class="tag">&lt;h1&gt;</span>العنوان الكبير<span class="tag">&lt;/h1&gt;</span>
+<span class="tag">&lt;p&gt;</span>هادشي فقرة من النص.<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;a</span> <span class="attr-name">href</span>=<span class="attr-value">"https://chat.openai.com"</span><span class="tag">&gt;</span>رابط للموقع<span class="tag">&lt;/a&gt;</span>
+  </code></pre>
+
+        <h2>الصفات (Attributes)</h2>
+        <p>
+            الوسوم كتقدر تكون عندها صفات، بحال <code>href</code> في الرابط، أو <code>src</code> في الصور.<br>
+            الصفات كتزيد معلومات للوسم باش المتصفح يفهم كثر.<br>
+            مثال: <code>&lt;a href="https://example.com"&gt;نص الرابط&lt;/a&gt;</code>
+        </p>
+        <pre><code>
+<span class="tag">&lt;img</span> <span class="attr-name">src</span>=<span class="attr-value">"img/photo.jpg"</span> <span class="attr-name">alt</span>=<span class="attr-value">"صورة توضيحية"</span><span class="tag">&gt;</span>
+  </code></pre>
+
+        <h2>كيفاش ندير صفحة بسيطة؟</h2>
+        <p>
+            دابا غادي نديروا مثال صغير على صفحة HTML كاملة وسهلة:<br>
+        </p>
+        <pre><code>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html lang="ar" dir="rtl"&gt;</span>
+  <span class="tag">&lt;head&gt;</span>
+    <span class="tag">&lt;meta</span> <span class="attr-name">charset</span>=<span class="attr-value">"UTF-8"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;title&gt;</span>صفحتي الأولى<span class="tag">&lt;/title&gt;</span>
+  <span class="tag">&lt;/head&gt;</span>
+  <span class="tag">&lt;body&gt;</span>
+    <span class="tag">&lt;h1&gt;</span>مرحبا بكم!<span class="tag">&lt;/h1&gt;</span>
+    <span class="tag">&lt;p&gt;</span>هاد الصفحة كتوضح مثال بسيط.<span class="tag">&lt;/p&gt;</span>
+  <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+  </code></pre>
+
+        <h2>نصائح باش تتعلم HTML مزيان</h2>
+        <ul>
+            <li>ديما جرب وكتب الكود بيدك، ماشي غير تقرا.</li>
+            <li>استعمل المتصفح باش تشوف النتيجة ديالك مباشرة.</li>
+            <li>تعلم تزيين الصفحات باستعمال CSS مع الوقت.</li>
+            <li>تابع المواقع التعليمية بحال <a href="https://developer.mozilla.org/ar/docs/Web/HTML" target="_blank"
+                    rel="noopener noreferrer">MDN Web Docs بالعربية</a>.</li>
+        </ul>
+
+        <h2>خلاصة طويلة وبسيطة</h2>
+        <p>
+            HTML هي العمود الفقري ديال أي صفحة ويب، بلاها مايمكنش تبني صفحة. كتعطي للمتصفح الهيكلة والمحتوى، والصفات
+            كتزيد التفاصيل.<br>
+            تعلمها سهل، ولكن خاصك التدريب والتجريب بزاف.<br>
+            مورا HTML كتجي CSS باش تزين وتلون الصفحة، ومن بعد جافاسكريبت باش تزيد ديناميكية وحركة.<br>
+            النصائح اللي عطيتك غادي تعاونك تبني صفحة جميلة ومفهومة.<br>
+            واللي بغا يعرف أكثر، يقدر يشوف أكواد كبيرة ومتقدمة فالإنترنت ويتعلم منها.
+        </p>
+
+        <h2>مراجع مهمة</h2>
+        <ol>
+            <li><a href="https://html.spec.whatwg.org/multipage/" target="_blank" rel="noopener noreferrer">المواصفات
+                    الرسمية لـ HTML</a></li>
+            <li><a href="https://www.w3schools.com/html/" target="_blank" rel="noopener noreferrer">W3Schools - HTML
+                    Tutorial</a></li>
+            <li><a href="https://developer.mozilla.org/ar/docs/Web/HTML" target="_blank" rel="noopener noreferrer">MDN
+                    Web Docs - HTML بالعربية</a></li>
+        </ol>
+
+        <h2>شكراً على المتابعة! 🌿</h2>
+
+    </div>
+
+    <script>
+        // نضيف الأنيميشن للعناوين واحدة واحدة بالتتابع
+        const headers = document.querySelectorAll('h2');
+        headers.forEach((h2, i) => {
+            setTimeout(() => {
+                h2.classList.add('animate' + ((i % 3) + 1));
+            }, i * 600);
+        });
+    </script>
+</body>
+
+</html>

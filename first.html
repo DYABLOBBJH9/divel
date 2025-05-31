@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DYABLO</title>
+    <link rel="stylesheet" href="css.css" />
+    <link rel="stylesheet" href="html.html" />
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <a href="#" class="logo">programtion bdarija</a>
+            <button class="menu-toggle" aria-label="قائمة التنقل">☰</button>
+            <ul class="nav-links">
+                <li><a href="secende.html">CSS</a></li>
+
+                <li><a href="html.html">HTML</a></li>
+
+                <li><a href="python.html">PYTHON</a></li>
+                <li><a href="javascript.html">JavaScript</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <h2>DYABLO</h2>
+            <p>
+                Welcome to your programming learning site. This site contains a comprehensive guide to learning
+                programming from 0. The languages used are:
+                <span> CSS, JavaScript, C++, <span class="and">and</span> Python.</span>
+            </p>
+            <button>Click Here</button>
+        </div>
+    </div>
+
+    <script>
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
+
+        menuToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("show");
+        });
+    </script>
+</body>
+
+</html>

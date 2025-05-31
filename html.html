@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>تعلم HTML بالدارجة - صفحة طويلة ومفصلة مع أنيميشن</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: linear-gradient(135deg, #000000, #004d00);
+            color: #d0f0c0;
+            margin: 0;
+            padding: 20px;
+            direction: rtl;
+        }
+
+        h1,
+        h2 {
+            color: #7fff00;
+            text-shadow: 0 0 5px #7fff00;
+            opacity: 0;
+            animation: fadeSlideUp 1s ease forwards;
+        }
+
+        section:nth-child(1) h2 {
+            animation-delay: 0.2s;
+        }
+
+        section:nth-child(2) h2 {
+            animation-delay: 0.5s;
+        }
+
+        section:nth-child(3) h2 {
+            animation-delay: 0.8s;
+        }
+
+        section:nth-child(4) h2 {
+            animation-delay: 1.1s;
+        }
+
+        section:nth-child(5) h2 {
+            animation-delay: 1.4s;
+        }
+
+        section:nth-child(6) h2 {
+            animation-delay: 1.7s;
+        }
+
+        section:nth-child(7) h2 {
+            animation-delay: 2.0s;
+        }
+
+        section:nth-child(8) h2 {
+            animation-delay: 2.3s;
+        }
+
+        section:nth-child(9) h2 {
+            animation-delay: 2.6s;
+        }
+
+        section:nth-child(10) h2 {
+            animation-delay: 2.9s;
+        }
+
+        section:nth-child(11) h2 {
+            animation-delay: 3.2s;
+        }
+
+        section:nth-child(12) h2 {
+            animation-delay: 3.5s;
+        }
+
+        section:nth-child(13) h2 {
+            animation-delay: 3.8s;
+        }
+
+        section:nth-child(14) h2 {
+            animation-delay: 4.1s;
+        }
+
+        section:nth-child(15) h2 {
+            animation-delay: 4.4s;
+        }
+
+        section:nth-child(16) h2 {
+            animation-delay: 4.7s;
+        }
+
+        section:nth-child(17) h2 {
+            animation-delay: 5.0s;
+        }
+
+        section:nth-child(18) h2 {
+            animation-delay: 5.3s;
+        }
+
+        section:nth-child(19) h2 {
+            animation-delay: 5.6s;
+        }
+
+        section:nth-child(20) h2 {
+            animation-delay: 5.9s;
+        }
+
+        section:nth-child(21) h2 {
+            animation-delay: 6.2s;
+        }
+
+        section:nth-child(22) h2 {
+            animation-delay: 6.5s;
+        }
+
+        section:nth-child(23) h2 {
+            animation-delay: 6.8s;
+        }
+
+        section:nth-child(24) h2 {
+            animation-delay: 7.1s;
+        }
+
+        section:nth-child(25) h2 {
+            animation-delay: 7.4s;
+        }
+
+        @keyframes fadeSlideUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes glowPulse {
+
+            0%,
+            100% {
+                box-shadow: 0 0 8px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+            }
+
+            50% {
+                box-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00, 0 0 60px #00ff00;
+            }
+        }
+
+        pre {
+            background-color: #121212;
+            color: #9fef00;
+            padding: 15px;
+            border-radius: 10px;
+            overflow-x: auto;
+            box-shadow: 0 0 8px #00ff00;
+            animation: glowPulse 4s ease-in-out infinite;
+            margin-top: 10px;
+            font-size: 16px;
+            line-height: 1.5;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .tag {
+            color: #7fff00;
+        }
+
+        .attribute {
+            color: #00ffff;
+        }
+
+        .value {
+            color: #ffcc00;
+        }
+
+        .comment {
+            color: #888888;
+            font-style: italic;
+        }
+
+        section {
+            margin-bottom: 50px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            background: rgba(0, 77, 0, 0.2);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px #007700aa;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            color: #004400;
+            font-weight: bold;
+            text-shadow: 0 0 10px #00ff00;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>تعلم HTML بالدارجة المغربية - صفحة طويلة مع أنيميشن</h1>
+    </header>
+
+    <section>
+        <h2>1. شنو هي HTML؟</h2>
+        <p>HTML هي اللغة اللي كتنظم بها صفحات الويب. كتعطي الهيكلة للمحتوى، بحال العناوين، الفقرات، الصور، والروابط.</p>
+        <pre>
+<span class="comment">&lt;!-- مثال بسيط لصفحة HTML --&gt;</span>
+<span class="tag">&lt;!DOCTYPE</span> <span class="attribute">html</span><span class="tag">&gt;</span>
+<span class="tag">&lt;html&gt;</span>
+  <span class="tag">&lt;head&gt;</span>
+    <span class="tag">&lt;title&gt;</span>عنوان الصفحة<span class="tag">&lt;/title&gt;</span>
+  <span class="tag">&lt;/head&gt;</span>
+  <span class="tag">&lt;body&gt;</span>
+    <span class="tag">&lt;h1&gt;</span>مرحبا بك!<span class="tag">&lt;/h1&gt;</span>
+  <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+  </pre>
+    </section>
+
+    <section>
+        <h2>2. الوسم &lt;h1&gt; حتى &lt;h6&gt; - العناوين</h2>
+        <p>كتستعمل العناوين باش تنظم الصفحة من الأكبر للأصغر. <code>&lt;h1&gt;</code> هو العنوان الكبير،
+            <code>&lt;h6&gt;</code> صغير.
+        </p>
+        <pre>
+<span class="tag">&lt;h1&gt;</span>العنوان الكبير<span class="tag">&lt;/h1&gt;</span>
+<span class="tag">&lt;h2&gt;</span>العنوان المتوسط<span class="tag">&lt;/h2&gt;</span>
+<span class="tag">&lt;h3&gt;</span>العنوان الصغير<span class="tag">&lt;/h3&gt;</span>
+  </pre>
+    </section>
+
+    <section>
+        <h2>3. الوسم &lt;p&gt; - الفقرة</h2>
+        <p>الفقرة كتحتوي على نص، وكتكون دائما داخل وسم <code>&lt;p&gt;</code>.</p>
+        <pre>
+<span class="tag">&lt;p&gt;</span>هذا نص داخل فقرة.<span class="tag">&lt;/p&gt;</span>
+  </pre>
+    </section>
+
+    <section>
+        <h2>4. الوسم &lt;a&gt; - الروابط</h2>
+        <p>باش تدير رابط، كتستعمل وسم <code>&lt;a&gt;</code> مع خاصية <code>href</code>.</p>
+        <pre>
+<span class="tag">&lt;a</span> <span class="attribute">href</span>=<span class="value">"https://example.com"</span><span class="tag">&gt;</span>زر الرابط<span class="tag">&lt;/a&gt;</span>
+  </pre>
+    </section>
+
+    <section>
+        <h2>5. الوسم &lt;img&gt; - الصور</h2>
+        <p>باش تحط صورة، كتستعمل وسم <code>&lt;img&gt;</code> مع الخاصيتين <code>src</code> و <code>alt</code>.</p>
+        <pre>
+<span class="tag">&lt;img</span> <span class="attribute">src</span>=<span class="value">"photo.jpg"</span> <span class="attribute">alt</span>=<span class="value">"وصف الصورة"</span><span class="tag">&gt;</span>
+  </pre>
+    </section>
+
+    <section>
+        <h2>6. الوسم &lt;ul&gt; و &lt;ol&gt; - القوائم</h2>
+        <p>كتستعمل القوائم باش تنظم عناصر بشكل نقاط (غير مرتبة) أو أرقام (مرتبة).</p>
+        <pre>
+<span class="comment">قائمة غير مرتبة</span>
+<span class="tag">&lt;ul&gt;</span>
+  <span class="tag">&lt;li&gt;</span>عنصر 1<span class="tag">&lt;/li&gt;</span>
+  <span class="tag">&lt;li&gt;</span>عنصر 2<span class="tag">&lt;/li&gt;</span>
+<span class="tag">&lt;/ul&gt;</span>
+
+<span class="comment">قائمة مرتبة</span>
+<span class="tag">&lt;ol&gt;</span>
+  <span class="tag">&lt;li&gt;</span>عنصر أ<span class="tag">&lt;/li&gt;</span>
+  <span class="tag">&lt;li&gt;</span>عنصر ب<span class="tag">&lt;/li&gt;</span>
+<span class="tag">&lt;/ol&gt;</span>
+  </pre>
+    </section>
+
+    <section>
+        <h2>7. الوسم &lt;div&gt; - الحاويات</h2>
+        <p>وحدة من أهم الوسوم باش تجمع عناصر مع بعض وكتخدم معها CSS.</p>
+        <pre>
+<span class="tag">&lt;div</span> <span class="attribute">class</span>=<span class="value">"container"</span><span class="tag">&gt;</span>
+  محتوى هنا
+<span class="tag">&lt;/div&gt;</span>
+  </pre>
+    </section>
+
+    <section>
+        <h2>8. الوسم &lt;span&gt; - عنصر داخل سطر</h2>
+        <p>باش تميز جزء صغير من النص داخل عنصر كبير.</p>
+        <pre>
+<span class="tag">&lt;p&gt;</span>هنا <span class="tag">&lt;span</span> <span class="attribute">style</span>=<span class="value">"color: red;"</span><span class="tag">&gt;</span>نص ملون<span class="tag">&lt;/span&gt;</span>.<span class="tag">&lt;/p&gt;</span>
+  </pre>
+    </section>
+
+    <section>
+        <h2>9. الوسم &lt;form&gt; - النماذج</h2>
+        <p>باش تجمع معلومات من المستخدم، كتستعمل <code>&lt;form&gt;</code>.</p>
+        <pre>
+<span class="tag">&lt;form</span> <span class="attribute">action</span>=<span class="value">"/submit"</span> <span class="attribute">method</span>=<span class="value">"post"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">name</span>=<span class="value">"username"</span> <span class="tag">&gt;</span>
+  <span class="tag">&lt;input</span> <span class="attribute">type</span>=<span class="value">"submit"</span> <span class="tag">&gt;</span>
+<span class="tag">&lt;/form&gt;</span>
+  </pre>
+    </section>
+
+    <section>
+        <h2>10. الوسم &lt;table&gt; - الجداول</h2>
+        <p>كتستعمل الجداول باش تعرض بيانات منظمة في صفوف وأعمدة.</p>
+        <pre>
+<span class="tag">&lt;table&gt;</span>
+  <span class="tag">&lt;tr&gt;</span>
+    <span class="tag">&lt;th&gt;</span>العنوان 1<span class="tag">&lt;/th&gt;</span>
+    <span class="tag">&lt;th&gt;</span>العنوان 2<span class="tag">&lt;/th&gt;</span>
+  <span class="tag">&lt;/tr&gt;</span>
+  <span class="tag">&lt;tr&gt;</span>
+    <span class="tag">&lt;td&gt;</span>بيانات 1<span class="tag">&lt;/td&gt;</span>
+    <span class="tag">&lt;td&gt;</span>بيانات 2<span class="tag">&lt;/td&gt;</span>
+  <span class="tag">&lt;/tr&gt;</span>
+<span class="tag">&lt;/table&gt;</span>
+  </pre>
+    </section>
+
+    <section>
+        <h2>11. الوسم &lt;header&gt; - رأس الصفحة</h2>
+        <p>كتستعمل باش تدير رأس الصفحة أو قسم علوي.</p>
+        <pre>
+<span class="tag">&lt;header&gt;</span>
+  <span class="tag">&lt;h1&gt;</span>عنوان الموقع<span class="tag">&lt;/h1&gt;</span>
+<span class="tag">&lt;/header&gt;</span>
+  </pre>
+    </section>
+
+    <section>
+        <h2>12. الوسم &lt;footer&gt; - تذييل الصفحة</h2>
+        <p>باش تدير قسم التذييل في الأسفل.</p>
+        <pre>
+<span class="tag">&lt;footer&gt;</span>
+  حقوق النشر © 2025
+<span class="tag">&lt;/footer&gt;</span>
+  </pre>
+    </section>
+
+    <section>
+        <h2>13. الوسم &lt;nav&gt; - التنقل</h2>
+        <p>كتستعمل باش تدير قائمة التنقل داخل الموقع.</p>
+        <pre>
+<span class="tag">&lt;nav&gt;</span>
+  <span class="tag">&lt;a</span> <span class="attribute">href</span>=<span class="value">"#home"</span><span class="tag">&gt;</span>الرئيسية<span class="tag">&lt;/a&gt;</span>
+  <span class="tag">&lt;a</span> <span class="attribute">href</span>=<span class="value">"#about"</span><span class="tag">&gt;</span>معلومات<span class="tag">&lt;/a&gt;</span>
+<span class="tag">&lt;/nav&gt;</span>
+  </pre>
+    </section>
+
+    <section>
+        <h2>14. الوسم &lt;section&gt; - الأقسام</h2>
+        <p>باش تجمع محتوى في قسم مستقل داخل الصفحة.</p>
+        <pre>
+<span class="tag">&lt;section&gt;</span>
+  محتوى القسم
+<span class="tag">&lt;/section&gt;</span>
+  </pre>
+    </section>
+
+    <section>
+        <h2>15. الوسم &lt;article&gt; - مقال</h2>
+        <p>كيستعمل لكتابة مقال مستقل أو محتوى قائم بذاته.</p>
+        <pre>
+<span class="tag">&lt;article&gt;</span>
+  مقال أو موضوع
+<span class="tag">&lt;/article&gt;</span>
+  </pre>
+    </section>
+
+    <section>
+        <h2>16. الوسم &lt;strong&gt; و &lt;b&gt; - الخط العريض</h2>
+        <p>باش تبرز نص بخط عريض.</p>
+        <pre>
+<span class="tag">&lt;strong&gt;</span>نص مهم<span class="tag">&lt;/strong&gt;</span>
+<span class="tag">&lt;b&gt;</span>نص عريض<span class="tag">&lt;/b&gt;</span>
+  </pre>
+    </section>
+
+    <section>
+        <h2>17. الوسم &lt;em&gt; و &lt;i&gt; - الخط المائل</h2>
+        <p>باش تبرز نص بخط مائل.</p>
+        <pre>
+<span class="tag">&lt;em&gt;</span>نص مائل<span class="tag">&lt;/em&gt;</span>
+<span class="tag">&lt;i&gt;</span>نص مائل<span class="tag">&lt;/i&gt;</span>
+  </pre>
+    </section>
+
+    <section>
+        <h2>18. الوسم &lt;br&gt; - السطر الجديد</h2>
+        <p>باش تدير سطر جديد بدون ما تبدأ فقرة جديدة.</p>
+        <pre>
+<span class="tag">&lt;p&gt;</span>سطر هنا<br><span class="tag">&lt;/p&gt;</span>
+  </pre>
+    </section>
+
+    <section>
+        <h2>19. الوسم &lt;hr&gt; - خط أفقي</h2>
+        <p>باش تدير خط أفقي للفصل بين المحتويات.</p>
+        <pre>
+<span class="tag">&lt;hr&gt;</span>
+  </pre>
+    </section>
+
+    <section>
+        <h2>20. الوسم &lt;meta&gt; - ميتا البيانات</h2>
+        <p>كتستعمل لتعريف بيانات الصفحة للمستعرض ومحركات البحث.</p>
+        <pre>
+<span class="tag">&lt;meta</span> <span class="attribute">charset</span>=<span class="value">"UTF-8"</span><span class="tag">&gt;</span>
+  </pre>
+    </section>
+
+    <section>
+        <h2>21. الوسم &lt;link&gt; - الربط بالملفات الخارجية</h2>
+        <p>باش تربط ملف CSS خارجي بالصفحة.</p>
+        <pre>
+<span class="tag">&lt;link</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span> <span class="attribute">href</span>=<span class="value">"style.css"</span><span class="tag">&gt;</span>
+  </pre>
+    </section>
+
+    <section>
+        <h2>22. الوسم &lt;script&gt; - البرمجة</h2>
+        <p>باش تضيف جافاسكريبت للصفحة.</p>
+        <pre>
+<span class="tag">&lt;script&gt;</span>
+  console.log('مرحبا بك في HTML!');
+<span class="tag">&lt;/script&gt;</span>
+  </pre>
+    </section>
+
+    <section>
+        <h2>23. الوسم &lt;video&gt; - الفيديو</h2>
+        <p>باش تضيف فيديو للصفحة.</p>
+        <pre>
+<span class="tag">&lt;video</span> <span class="attribute">controls</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;source</span> <span class="attribute">src</span>=<span class="value">"movie.mp4"</span> <span class="attribute">type</span>=<span class="value">"video/mp4"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;/video&gt;</span>
+  </pre>
+    </section>
+
+    <section>
+        <h2>24. الوسم &lt;audio&gt; - الصوت</h2>
+        <p>باش تضيف ملف صوتي.</p>
+        <pre>
+<span class="tag">&lt;audio</span> <span class="attribute">controls</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;source</span> <span class="attribute">src</span>=<span class="value">"audio.mp3"</span> <span class="attribute">type</span>=<span class="value">"audio/mpeg"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;/audio&gt;</span>
+  </pre>
+    </section>
+
+    <section>
+        <h2>25. الوسم &lt;iframe&gt; - الإطار الداخلي</h2>
+        <p>باش تضيف محتوى من موقع آخر داخل صفحتك.</p>
+        <pre>
+<span class="tag">&lt;iframe</span> <span class="attribute">src</span>=<span class="value">"https://example.com"</span> <span class="attribute">width</span>=<span class="value">"600"</span> <span class="attribute">height</span>=<span class="value">"400"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;/iframe&gt;</span>
+  </pre>
+    </section>
+
+    <footer>
+        صفحة تعليم HTML طويلة ومفصلة بالدارجة المغربية مع أنيميشن وجمال في التنسيق.
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const sections = document.querySelectorAll('section');
+            sections.forEach((section, i) => {
+                setTimeout(() => {
+                    section.classList.add('visible');
+                }, i * 300);
+            });
+        });
+    </script>
+
+</body>
+
+</html>
